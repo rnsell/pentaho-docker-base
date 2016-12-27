@@ -23,6 +23,7 @@ WORKDIR ${DEST_DIR}
 
 # Get and unpack pdi-ce 6.0 stable.
 # COPY pdi-ce-7.0.0.0-25.zip pdi-ce-7.0.0.0-25.zip
-RUN wget http://downloads.sourceforge.net/project/pentaho/Data%20Integration/7.0/${ARCHIVE_FILE}
-RUN unzip ${ARCHIVE_FILE} && rm -f ${ARCHIVE_FILE}
-RUN chown -R 555 /home/pentaho/data-integration/
+RUN wget http://downloads.sourceforge.net/project/pentaho/Data%20Integration/7.0/${ARCHIVE_FILE} \
+    && unzip ${ARCHIVE_FILE} \
+    && rm -f ${ARCHIVE_FILE} \
+    && chown -R 555 /home/pentaho/data-integration/
